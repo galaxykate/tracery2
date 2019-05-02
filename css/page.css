@@ -1,0 +1,84 @@
+html {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+	background: hsl(220, 7%, 70%);
+}
+
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: basic;
+	src: url(fonts/OpenSans-CondLight.ttf);
+}
+
+main {
+	height: 100%;
+}
+
+#main-cols {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.footer {
+	padding: 4px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	
+	flex: 1;
+	margin: 5px;
+	
+}
+
+#pview {
+	width: 500px;
+	height: 500px;
+}
+
+.pview-canvas,.pview-labels,  .pview-svg{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.pview-canvas {
+	z-index: 0;
+}
+.pview-labels {
+
+	color: white;
+	pointer-events: none;
+	z-index: 20;
+}
+
+.pview-label-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.pview-svg{
+	z-index: 10;
+	pointer-events: none;
+}
+
+
+.node-label {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: white;
+}

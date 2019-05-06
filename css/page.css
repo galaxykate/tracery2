@@ -41,44 +41,34 @@ main {
 	
 }
 
-#pview {
-	width: 500px;
-	height: 500px;
-}
-
-.pview-canvas,.pview-labels,  .pview-svg{
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-}
-
-.pview-canvas {
-	z-index: 0;
-}
-.pview-labels {
-
-	color: white;
-	pointer-events: none;
-	z-index: 20;
-}
-
-.pview-label-center{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-
-.pview-svg{
+.panel {
+	position: relative;
 	z-index: 10;
-	pointer-events: none;
+	display: flex;
+	flex-direction: column;
 }
 
+.panel>.content {
+	position: relative;
+	z-index: 10;
+	flex: 1;
+	background-color: hsla(20, 50%, 97%, 1);
+	padding:  2px 5px;
+}
 
-.node-label {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	color: white;
+.panel>.header {
+	position: relative;
+	z-index: 20;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+	display: flex;
+	background-color: hsla(320, 50%, 90%, 1);
+
+}
+
+.header>.header-main {
+	flex: 1;
+}
+
+.header>.header-controls {
+	background-color: hsla(320, 50%, 50%, 1);
 }

@@ -1,47 +1,18 @@
-.ery-console {
-	font-size: 10px;
-	color: hsla(310, 50%, 40%, 1);
+.language-view {
+	height: 100%;
 }
-.ery-dictentry {
+
+.objview-row {
+	padding: 2px;
+	margin: 2px;
+	border: 1px solid hsla(0, 0%, 0%, .5);
+}
+
+
+.objview-row {
 	display: flex;
-	flex-direction: row;
-	background-color: hsla(310, 50%, 90%, .4);
 }
 
-.ery-dictentry-key {
-	margin: 1px;
-	background-color: hsla(310, 50%, 90%, .4);
-}
-
-.ery-dictentry-data {
-	margin: 1px;
-	background-color: hsla(310, 50%, 90%, .4);
-}
-
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .3s ease;
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  /*transform: translateX(10px);*/
-  opacity: 0;
-}
-
-#test {
-	background-color: hsla(310, 50%, 50%, 1)
-}
-
-.selected {
-	background-color: hsla(210, 50%, 50%, 1)
+.objview-row-label {
+	background-color: hsla(180, 50%, 50%, .5);
 }

@@ -16,3 +16,12 @@
 .objview-row-label {
 	background-color: hsla(180, 50%, 50%, .5);
 }
+
+.objview-string {
+	background-color: hsla(280, 50%, 90%, .5);
+}
+
+
+.objview-string pre {
+	margin: 0px;
+}

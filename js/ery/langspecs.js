@@ -7,6 +7,11 @@ let languageSpecs = {
 			RuleSet: ["string(tracery)", "array of string(tracery)"],
 			Grammar: "dictionary of RuleSet"
 		},
+		animals: {
+			mammals: ["okapi", "corgi","rhinoceros", "porpoise"],
+			birds: ["emu", "eagle", "flamingo"],
+			fish: ["catfish", "pufferfish"],
+		},
 		origin: "Grammar"
 
 	},

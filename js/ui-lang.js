@@ -4,8 +4,10 @@ Vue.component('obj-view', {
 	template: `
 	<div v-bind:class="'objview objview-' + getType(obj)">
 		
-		<div v-if="getType(obj) === 'object'"
-			class="objview-row" v-for="(value, name) in obj">
+		<div class="objview-row" 
+			v-if="getType(obj) === 'object'"
+			v-for="(value, name) in obj"
+		>
 			<div class="objview-row-label" >{{name}}</div>:
 			<div class="objview-row-content">
 			
@@ -14,13 +16,15 @@ Vue.component('obj-view', {
 			</div>
 		</div>
 
-		<div v-if="getType(obj) ==='array'">
-			ARRAY
+		<div class="objview-item"
+			v-if="getType(obj) ==='array'"
+			v-for="item in obj"
+		>
+			<obj-view :obj="item">
+			</obj-view>
 		</div>
 
-		<div v-if="getType(obj) ==='string'">
-			STRING:{{obj}}
-		</div>
+		<pre v-if="getType(obj) ==='string'" class="objview-string">{{obj}}</pre>
 	</div>
 	`,
 	props: ["obj"],

@@ -2,13 +2,21 @@
 // celery, cemetery, chancery, cheery, chicanery, confectionery, creamery, crockery, cutlery, delivery, drapery, embroidery, emery, every, fiery,finery, flattery, flowery, frippery, gallery, greenery, imagery, livery, lottery, mastery, millinery, misery, monastery, mystery, nursery, ornery, peppery, periphery, pottery, refinery, robbery, scenery, sorcery, stationery, tannery, tapestry, witchery, aery, archery, artery, bakery, bravery
 let objCount = 0
 
+function createErySubObject(type) {
+	let idNumber = objCount++
+
+	return {
+		idNumber:idNumber,
+		type: type,
+		isPlaceholder: false
+	}
+}
+
 function expandObject(raw) {
 	// Expand this raw object into an editable blackboard-style boject,
 	// Where all elements have object wrappers to track state/type (and allow vue editing)
 
-	let obj = {
-		id: objCount++,
-	}
+	let obj = createErySubObject()
 	// All objects are dictionaries, because we don't have an object property list
 	switch (typeof raw) {
 		case "object":
@@ -29,6 +37,7 @@ function expandObject(raw) {
 
 
 	}
+	obj.id = obj.type + obj.idNumber
 	return obj
 }
 
@@ -43,7 +52,8 @@ let languageSpecsRaw = {
 			Grammar: "dictionary of RuleSet"
 		},
 		animals: {
-			mammals: ["okapi", "corgi", "rhinoceros", "porpoise"],
+			mammals: ["okapi", "rhinoceros", "porpoise", "meercat", "moose", "grizzly", "bobcat", "hedgehog", "wolf", "fox", "rabbit", "groundhog"],
+			pets: [["maine coon", "ginger", "grey tuxedo"], ["great dane", "poodle", "corgi", "svalhund"]],
 			birds: ["emu", "eagle", "flamingo"],
 			fish: ["catfish", "pufferfish"],
 		},

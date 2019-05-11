@@ -1,14 +1,69 @@
+.dragActive {
+	border: 10px  solid hsla(240, 50%, 50%, .9);
+}
+
+
+.dropPlaceholder {
+	width: 10px;
+	background-color: hsla(320, 50%, 60%, 1);
+}
+.dragTarget.objview-array  {
+	 background-color: hsla(240, 50%, 60%, 1);
+}
+
+.draggable-helper {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	
+
+	
+	border-radius: 20px;
+	 padding: 2px 5px ;
+	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, .4);
+	 background-color: hsla(240, 50%, 90%, 1);
+	 z-index: 100;
+}
+
+.disable-select{
+user-select: none;
+}
+
 .language-view {
 	height: 100%;
 }
 
-.objview-array>.objview {
+.objview-array {
+	border-radius: 4px;
+	border: 1px  solid hsla(240, 50%, 50%, .9);
+	 border-width: 0px 2px 0px 2px;
+	 padding: 2px 5px ;
+	 background-color: hsla(240, 50%, 50%, .1);
+}
+
+.objview-array>.objview.draggable {
+
+	box-shadow: 0px 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+
+.objview-array-item {
+	display: inline-block;
 	margin: 2px;
 	padding: 2px;
 	border-radius: 2px;
-	display: inline-block;
+	
 	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, .4);
-}	
+}
+
+.objview-array-active {
+	background-color: hsla(320, 50%, 50%, .3);
+}
+.objview-array-controls {
+	display: inline-block;
+	border: 1px solid hsla(0, 0%, 0%, .5);
+	background-color: hsla(180, 50%, 50%, .3);
+}
 
 .objview-row {
 	padding: 2px;

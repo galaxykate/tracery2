@@ -2,10 +2,13 @@ html {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	width: 100%;
 	height: 100%;
+
 	background: hsl(220, 7%, 70%);
 }
 
+
 body {
+	margin: 0px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	width: 100%;
 	height: 100%;
@@ -27,6 +30,10 @@ main {
 	height: 100%;
 }
 
+.ghost {
+
+	opacity: 0.2;
+}
 .footer {
 	padding: 4px;
 }

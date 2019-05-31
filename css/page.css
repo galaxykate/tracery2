@@ -24,6 +24,7 @@ main {
 }
 
 #main-cols {
+	o
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -39,6 +40,8 @@ main {
 }
 
 .column {
+	height: 100%;
+	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	position: relative;

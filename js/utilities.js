@@ -21,15 +21,15 @@ function serialPromise(array, handleVal, onResults) {
 	function workMyCollection(arr) {
 		return array.reduce((promise, v) => {
 			return promise
-			.then((result) => {
-				return valToPromise(v).then(result => final.push(result));
-			})
-			.catch(console.error);
+				.then((result) => {
+					return valToPromise(v).then(result => final.push(result));
+				})
+				.catch(console.error);
 		}, Promise.resolve());
 	}
 
 	workMyCollection(array)
-	.then(() => onResults(final));
+		.then(() => onResults(final));
 
 }
 
@@ -63,7 +63,7 @@ function canvasToThreeTexture(loader, canvas, callback) {
 		function(err) {
 			console.error('An error happened.');
 		}
-		);
+	);
 
 }
 
@@ -72,19 +72,19 @@ function canvasToThreeTexture(loader, canvas, callback) {
  * MIT Licensed.
  */
 
- function extend(destination, source) {
- 	for (var k in source) {
- 		if (source.hasOwnProperty(k)) {
- 			destination[k] = source[k];
- 		}
- 	}
- 	return destination;
- }
+function extend(destination, source) {
+	for (var k in source) {
+		if (source.hasOwnProperty(k)) {
+			destination[k] = source[k];
+		}
+	}
+	return destination;
+}
 
 // https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
 String.prototype.hashCode = function() {
 	var hash = 0,
-	i, chr;
+		i, chr;
 	if (this.length === 0) return hash;
 	for (i = 0; i < this.length; i++) {
 		chr = this.charCodeAt(i);
@@ -363,21 +363,21 @@ var utilities = {
 		// use the correct number of args
 		switch (arguments.length) {
 			case 1:
-			return utilities.noiseObj.noise2D(arguments[0], 1000);
-			break;
+				return utilities.noiseObj.noise2D(arguments[0], 1000);
+				break;
 			case 2:
-			return utilities.noiseObj.noise2D(arguments[0], arguments[1]);
-			break;
+				return utilities.noiseObj.noise2D(arguments[0], arguments[1]);
+				break;
 			case 3:
-			return utilities.noiseObj.noise3D(arguments[0], arguments[1], arguments[2]);
-			break;
+				return utilities.noiseObj.noise3D(arguments[0], arguments[1], arguments[2]);
+				break;
 			case 4:
-			return utilities.noiseObj.noise4D(arguments[0], arguments[1], arguments[2], arguments[3]);
-			break;
+				return utilities.noiseObj.noise4D(arguments[0], arguments[1], arguments[2], arguments[3]);
+				break;
 			default:
-			console.log("Attempting to use Noise with " + arguments.length + " arguments: not supported!");
-			return 0;
-			break;
+				console.log("Attempting to use Noise with " + arguments.length + " arguments: not supported!");
+				return 0;
+				break;
 		}
 	},
 
@@ -402,6 +402,8 @@ var utilities = {
 	},
 
 	words: {
+		emoji:("😎 🤓 😍 😀 😭 😡 😳 😱 😈 😺 👎 👍 🎃 🤖 👻 ☠️ 👽 👾 🤠 ✍️ 👀 🧠 👩‍🚀 🧝‍♀️ 🦹‍♂️ 🧙‍♀️ 👸 👩‍💻 🕵️‍♀️ 🧶 🧵 👗 🥼 👕 👘 👖 👠 👞 🧤 🧦 🧢 🎩 👑 💍 👓 🕶 🥽 🐶 🐱 🐭 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🐣 🦆 🦅 🦉 🦇 🐗 🐴 🦄 🐝 🐛 🦋 🐌 🐞 🐜 🦟 🐢 🐍 🕷 🦂 🐍 🦎 🦖 🐙 🦑 🦞 🦀 🐋 🦈 🐟 🐬 🐡 🐊 🐅 🐆 🦓 🦍 🐘 🦛 🦏 🐪 🐫 🦒 🦘 🐃 🐂 🐄 🐎 🐖 🐏 🐑 🦙 🐐 🦌 🐕 🐩 🐈 🐓 🦃 🦚 🦜 🦢 🐇 🦝 🦡 🐁 🐀 🐿 🦔 🐾 🐉 🌵 🎄 🌲 🌳 🌴 🌱 🌿 ☘️ 🍃 🍂 🍁 🍄 🐚 🌾 🌷 🥀 🌺 🌹 🌸 🌼 🌻 🌞 🌛 ⭐️ 💫 🌟 ✨ ⚡️ ☄️ 💥 🔥 🌪 🌈 ☀️ ☁️ 🌧 🌩 ❄️ ☃️ 💨 💧 💦 ☂️").split(" "),
+
 		syllables: {
 			first: "B P T T T N M M M B C D F G Ph J K L M N P Qu R S T V W X Y Z St Fl Bl Pr Kr Ll Chr Sk Br Sth Ch Dhr Dr Sl Sc Sh Thl Thr Pl Fr Phr Phl Wh".split(" "),
 			middle: "an ad in an on ion ill oop ack ist all ar art air aean eun eun euh esqu aphn arl ifn ast ign agn af av ant app ab er en eor eon ent enth iar ein irt ian ion iont ill il ipp in is it ik ob ov orb oon ion uk uf un ull urk".split(" "),
@@ -612,7 +614,7 @@ var utilities = {
 			while (n.length < count) {
 				let i = Math.floor(Math.random() * arr.length);
 				if (!n.includes(arr[i])) {
-				
+
 					n.push(arr[i])
 				}
 			}
@@ -733,8 +735,8 @@ var utilities = {
 
 	HSVtoRGB: function(h, s, v) {
 		var r,
-		g,
-		b;
+			g,
+			b;
 		h *= 6;
 		h = h % 6;
 
@@ -895,7 +897,7 @@ KColor.prototype.fill = function(g, shade, opacity, hueShift) {
 
 		g.fill((this.h + hueShift + 100) % 1, s2, l2, opacity)
 	} else
-	g.fill((this.h + hueShift + 100) % 1, this.s, this.l, opacity)
+		g.fill((this.h + hueShift + 100) % 1, this.s, this.l, opacity)
 }
 
 
@@ -910,7 +912,7 @@ KColor.prototype.stroke = function(g, shade, opacity, hueShift) {
 
 		g.stroke((this.h + hueShift + 100) % 1, s2, l2, opacity)
 	} else
-	g.stroke((this.h + hueShift + 100) % 1, this.s, this.l, opacity)
+		g.stroke((this.h + hueShift + 100) % 1, this.s, this.l, opacity)
 }
 
 
@@ -958,180 +960,180 @@ function extend(a, b) {
 	for (var key in b)
 		if (b.hasOwnProperty(key))
 			a[key] = b[key];
-		return a;
-	}
+	return a;
+}
 
-	extend(Vector.prototype, {
-		clone: function() {
-			return new Vector(this);
-		},
+extend(Vector.prototype, {
+	clone: function() {
+		return new Vector(this);
+	},
 
-		cloneInto: function(v) {
-			v.x = this.x;
-			v.y = this.y;
-			v.z = this.z;
-			return this;
-		},
+	cloneInto: function(v) {
+		v.x = this.x;
+		v.y = this.y;
+		v.z = this.z;
+		return this;
+	},
 
-		addMultiple: function(v, m) {
-			this.x += v.x * m;
-			this.y += v.y * m;
-			this.z += v.z * m;
-			return this;
-		},
-		addPolar: function(r, theta) {
-			this.x += r * Math.cos(theta);
-			this.y += r * Math.sin(theta);
-			return this;
-		},
+	addMultiple: function(v, m) {
+		this.x += v.x * m;
+		this.y += v.y * m;
+		this.z += v.z * m;
+		return this;
+	},
+	addPolar: function(r, theta) {
+		this.x += r * Math.cos(theta);
+		this.y += r * Math.sin(theta);
+		return this;
+	},
 
-		addSpherical: function(r, theta, phi) {
-			this.x += r * Math.cos(theta) * Math.cos(phi);
-			this.y += r * Math.sin(theta) * Math.cos(phi);
-			this.z += r * Math.sin(phi);
-			return this;
-		},
+	addSpherical: function(r, theta, phi) {
+		this.x += r * Math.cos(theta) * Math.cos(phi);
+		this.y += r * Math.sin(theta) * Math.cos(phi);
+		this.z += r * Math.sin(phi);
+		return this;
+	},
 
-		addRotated: function(v, theta) {
-			var cs = Math.cos(theta);
-			var sn = Math.sin(theta);
-			var x = v.x * cs - v.y * sn;
-			var y = v.x * sn + v.y * cs;
-			this.x += x;
-			this.y += y;
-			return this;
-		},
-
-
-
-		setToArray: function(x) {
-			this.x = x[0];
-			this.y = x[1];
-			if (x.length > 2)
-				this.z = x[2];
-		},
+	addRotated: function(v, theta) {
+		var cs = Math.cos(theta);
+		var sn = Math.sin(theta);
+		var x = v.x * cs - v.y * sn;
+		var y = v.x * sn + v.y * cs;
+		this.x += x;
+		this.y += y;
+		return this;
+	},
 
 
-		setToCSSPos: function(p) {
-			this.x = p.left;
-			this.y = p.top;
-			return this;
-		},
 
-		setToPolar: function(r, theta) {
-			this.x = r * Math.cos(theta);
-			this.y = r * Math.sin(theta);
-			return this;
-		},
-		setToCylindrical: function(r, theta, z) {
-			this.x = r * Math.cos(theta);
-			this.y = r * Math.sin(theta);
-			this.z = z;
-			return this;
-		},
-
-		setToPolarOffset: function(v, r, theta) {
-			this.x = v.x + r * Math.cos(theta);
-			this.y = v.y + r * Math.sin(theta);
-			this.z = v.z;
-		},
-
-		setToSpherical: function(r, theta, phi) {
-			this.x = r * Math.cos(theta) * Math.cos(phi);
-			this.y = r * Math.sin(theta) * Math.cos(phi);
-			this.z = r * Math.sin(phi);
-			return this;
-		},
-
-		setToMultiple: function(v, m) {
-			this.x = v.x * m;
-			this.y = v.y * m;
-			this.z = v.z * m;
-			return this;
-		},
-
-		setToAverage: function(array) {
-			this.x = 0;
-			this.y = 0;
-			this.z = 0;
-			for (var i = 0; i < array.length; i++) {
-				this.add(array[i])
-			}
-			this.div(array.length);
-		},
-
-		setToLerp: function(v0, v1, m) {
-			var m1 = 1 - m;
-			this.x = v0.x * m1 + v1.x * m;
-			this.y = v0.y * m1 + v1.y * m;
-			this.z = v0.z * m1 + v1.z * m;
-			return this;
-		},
-
-		setToLerpPlusNormal: function(v0, v1, m, n) {
-			var m1 = 1 - m;
-			var dx = v1.x - v0.x
-			var dy = v1.y - v1.y
-			this.x = v0.x * m1 + v1.x * m + -n * dy;
-			this.y = v0.y * m1 + v1.y * m + n * dx;
-			this.z = v0.z * m1 + v1.z * m;
-
-			return this;
-		},
-
-		lerpTo: function(v1, m) {
-			var m1 = 1 - m;
-			this.x = this.x * m1 + v1.x * m;
-			this.y = this.y * m1 + v1.y * m;
-			this.z = this.z * m1 + v1.z * m;
-			return this;
-		},
+	setToArray: function(x) {
+		this.x = x[0];
+		this.y = x[1];
+		if (x.length > 2)
+			this.z = x[2];
+	},
 
 
-		setToAddMultiple: function(v0, m0, v1, m1) {
-			this.x = v0.x * m0 + v1.x * m1;
-			this.y = v0.y * m0 + v1.y * m1;
-			this.z = v0.z * m0 + v1.z * m1;
-			return this;
-		},
+	setToCSSPos: function(p) {
+		this.x = p.left;
+		this.y = p.top;
+		return this;
+	},
 
-		setToAddMultiples: function() {
-			this.x = 0;
-			this.y = 0;
-			this.z = 0;
-			for (let i = 0; i < arguments.length / 2; i++) {
-				let index = i * 2;
+	setToPolar: function(r, theta) {
+		this.x = r * Math.cos(theta);
+		this.y = r * Math.sin(theta);
+		return this;
+	},
+	setToCylindrical: function(r, theta, z) {
+		this.x = r * Math.cos(theta);
+		this.y = r * Math.sin(theta);
+		this.z = z;
+		return this;
+	},
 
-				this.x += arguments[index].x * arguments[index + 1]
-				this.y += arguments[index].y * arguments[index + 1]
-				this.z += arguments[index].z * arguments[index + 1]
-			}
+	setToPolarOffset: function(v, r, theta) {
+		this.x = v.x + r * Math.cos(theta);
+		this.y = v.y + r * Math.sin(theta);
+		this.z = v.z;
+	},
 
-			return this;
-		},
+	setToSpherical: function(r, theta, phi) {
+		this.x = r * Math.cos(theta) * Math.cos(phi);
+		this.y = r * Math.sin(theta) * Math.cos(phi);
+		this.z = r * Math.sin(phi);
+		return this;
+	},
 
-		setToAddNormal: function(p, v, m) {
-			this.setTo(p)
-			this.x += v.y * m;
-			this.y += -v.x * m;
-		},
+	setToMultiple: function(v, m) {
+		this.x = v.x * m;
+		this.y = v.y * m;
+		this.z = v.z * m;
+		return this;
+	},
 
-		addMultipliedSum: function(v, offset, m) {
-			this.x += (v.x + offset.x) * m;
-			this.y += (v.y + offset.y) * m;
-			this.z += (v.z + offset.z) * m;
+	setToAverage: function(array) {
+		this.x = 0;
+		this.y = 0;
+		this.z = 0;
+		for (var i = 0; i < array.length; i++) {
+			this.add(array[i])
+		}
+		this.div(array.length);
+	},
 
-		},
+	setToLerp: function(v0, v1, m) {
+		var m1 = 1 - m;
+		this.x = v0.x * m1 + v1.x * m;
+		this.y = v0.y * m1 + v1.y * m;
+		this.z = v0.z * m1 + v1.z * m;
+		return this;
+	},
 
-		setToDifference: function(v0, v1) {
-			this.x = v0.x - v1.x;
-			this.y = v0.y - v1.y;
-			this.z = v0.z - v1.z;
-			return this;
-		},
+	setToLerpPlusNormal: function(v0, v1, m, n) {
+		var m1 = 1 - m;
+		var dx = v1.x - v0.x
+		var dy = v1.y - v1.y
+		this.x = v0.x * m1 + v1.x * m + -n * dy;
+		this.y = v0.y * m1 + v1.y * m + n * dx;
+		this.z = v0.z * m1 + v1.z * m;
+
+		return this;
+	},
+
+	lerpTo: function(v1, m) {
+		var m1 = 1 - m;
+		this.x = this.x * m1 + v1.x * m;
+		this.y = this.y * m1 + v1.y * m;
+		this.z = this.z * m1 + v1.z * m;
+		return this;
+	},
 
 
-		setTo: function(x, y, z) {
+	setToAddMultiple: function(v0, m0, v1, m1) {
+		this.x = v0.x * m0 + v1.x * m1;
+		this.y = v0.y * m0 + v1.y * m1;
+		this.z = v0.z * m0 + v1.z * m1;
+		return this;
+	},
+
+	setToAddMultiples: function() {
+		this.x = 0;
+		this.y = 0;
+		this.z = 0;
+		for (let i = 0; i < arguments.length / 2; i++) {
+			let index = i * 2;
+
+			this.x += arguments[index].x * arguments[index + 1]
+			this.y += arguments[index].y * arguments[index + 1]
+			this.z += arguments[index].z * arguments[index + 1]
+		}
+
+		return this;
+	},
+
+	setToAddNormal: function(p, v, m) {
+		this.setTo(p)
+		this.x += v.y * m;
+		this.y += -v.x * m;
+	},
+
+	addMultipliedSum: function(v, offset, m) {
+		this.x += (v.x + offset.x) * m;
+		this.y += (v.y + offset.y) * m;
+		this.z += (v.z + offset.z) * m;
+
+	},
+
+	setToDifference: function(v0, v1) {
+		this.x = v0.x - v1.x;
+		this.y = v0.y - v1.y;
+		this.z = v0.z - v1.z;
+		return this;
+	},
+
+
+	setTo: function(x, y, z) {
 		// Just in case this was passed a vector
 		if (x.x !== undefined) {
 			this.x = x.x;
@@ -1314,9 +1316,9 @@ function extend(a, b) {
 	isInPolygon: function(poly) {
 		var pt = this;
 		for (var c = false,
-			i = -1,
-			l = poly.length,
-			j = l - 1; ++i < l; j = i)
+				i = -1,
+				l = poly.length,
+				j = l - 1; ++i < l; j = i)
 			((poly[i].y <= pt.y && pt.y < poly[j].y) || (poly[j].y <= pt.y && pt.y < poly[i].y)) && (pt.x < (poly[j].x - poly[i].x) * (pt.y - poly[i].y) / (poly[j].y - poly[i].y) + poly[i].x) && (c = !c);
 		return c;
 	},
@@ -1651,7 +1653,7 @@ function extend(a, b) {
 
 		var head = headSize;
 		var d = v.magnitude() * m;
-		
+
 		g.pushMatrix();
 		g.translate(this.x, this.y);
 		g.rotate(v.getAngle());
@@ -1787,14 +1789,14 @@ Vector.lerp = function(v0, v1, a) {
 
 Vector.lookTowards = function(threeObj, p, v, up) {
 
-	threeObj.up.set(0, 0, 1)
-	if (up)
-		threeObj.up.set(up.x, up.y, up.z)
-	threeObj.position.x = p.x;
-	threeObj.position.y = p.y;
-	threeObj.position.z = p.z;
+		threeObj.up.set(0, 0, 1)
+		if (up)
+			threeObj.up.set(up.x, up.y, up.z)
+		threeObj.position.x = p.x;
+		threeObj.position.y = p.y;
+		threeObj.position.z = p.z;
 
-	threeObj.lookAt(new THREE.Vector3(p.x + v.x, p.y + v.y, p.z + v.z));
+		threeObj.lookAt(new THREE.Vector3(p.x + v.x, p.y + v.y, p.z + v.z));
 		//threeObj.lookAt(100, 0, 0);
 
 	},
@@ -1812,7 +1814,7 @@ Vector.lookTowards = function(threeObj, p, v, up) {
 		g.endShape(g.CLOSE)
 	}
 
-	Vector.drawSmoothBezierVerticesFromDirPoints = function(g, p0, p1, m0, m1) {
+Vector.drawSmoothBezierVerticesFromDirPoints = function(g, p0, p1, m0, m1) {
 	// create a bezier from these directional points
 	let handle = .2 * p0.getDistanceTo(p1);
 	let d0 = handle * m0;
@@ -1984,45 +1986,45 @@ function splitStrict(s, splitChar) {
 			var c = s.charAt(i);
 			switch (c) {
 				case "\\":
-				escape = true;
-				break;
+					escape = true;
+					break;
 				case "{":
-				pushLevel(i, "{", "}");
-				break;
+					pushLevel(i, "{", "}");
+					break;
 				case "(":
-				pushLevel(i, "(", ")");
-				break;
+					pushLevel(i, "(", ")");
+					break;
 				case "[":
-				pushLevel(i, "[", "]");
-				break;
+					pushLevel(i, "[", "]");
+					break;
 
 				case "}":
-				popLevel(i, "}");
-				break;
+					popLevel(i, "}");
+					break;
 				case ")":
-				popLevel(i, ")");
-				break;
+					popLevel(i, ")");
+					break;
 				case "]":
-				popLevel(i, "]");
-				break;
+					popLevel(i, "]");
+					break;
 
 				case "'":
-				if (levels.length === 0)
-					pushLevel(i, "'", "'", true);
-				else
-					popLevel(i, "'", true);
-				break;
+					if (levels.length === 0)
+						pushLevel(i, "'", "'", true);
+					else
+						popLevel(i, "'", true);
+					break;
 				case "\"":
-				if (levels.length === 0)
-					pushLevel(i, '"', '"', true);
-				else
-					popLevel(i, '"', true);
+					if (levels.length === 0)
+						pushLevel(i, '"', '"', true);
+					else
+						popLevel(i, '"', true);
 
-				break;
+					break;
 
 				case splitChar:
-				splitAt(i);
-				break;
+					splitAt(i);
+					break;
 
 			}
 
@@ -2458,7 +2460,7 @@ function threeToPos(object, camera) {
 	vector.setFromMatrixPosition(object.matrixWorld);
 
 	var widthHalf = screenSize.x / 2,
-	heightHalf = screenSize.y / 2;
+		heightHalf = screenSize.y / 2;
 
 	vector.project(camera);
 
@@ -2483,4 +2485,51 @@ function toStrictNumber(val) {
 		return parseInt(val)
 	if (toStrictNumberIsFloat.test(val))
 		return parseFloat(val)
+}
+
+
+function toVuePanelTemplate(settings) {
+	let classes = ""
+	if (settings.classes !== undefined) {
+		classes = " " + settings.classes
+	}
+	let bind = ""
+	if (settings.bind !== undefined) {
+		bind = " " + mapObjectToArray(settings.bind, (val, key) => ":" + key + "=" + inQuotes(val)).join(" ")
+	}
+
+	let onFxn = ""
+	if (settings.on !== undefined) {
+		onFxn = " " + mapObjectToArray(settings.on, (val, key) => "@" + key + "=" + inQuotes(val)).join(" ")
+	}
+
+
+	let template = `
+	<div class='panel${classes}'${bind}${onFxn}>
+		<div class='header'>
+			<div class='header-main'>
+				${settings.title}
+			</div>
+			<div class='header-controls'>
+				${settings.controls}
+			</div>
+		</div>
+
+		<div class='content'>
+			${settings.content}
+		</div>
+		
+		
+	
+	`
+
+	if (settings.footer)
+		template += `<div class='footer'>
+						${settings.footer}
+					</div>
+					`
+
+	template += "</div>"
+	return template
+
 }

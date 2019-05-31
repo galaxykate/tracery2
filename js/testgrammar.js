@@ -1,5 +1,6 @@
 let chefGrammar = {
  	"hex": "abcdef0123456789".split(""),
+	"digit": "0123456789".split(""),
 	"id": ["#hex##hex##hex##hex##hex##hex##hex##hex#"],
  	
  	"femmeFrenchAdj" : ["d'or","maudite","tacite","ombre","d'argent","amusé","verte","rouge","française","bonne","géniale","blanche","oublié","belles","nouveaux","fraîche","trompe","joyeuse","bonne","noire","chère","inclinée","malheur"],
@@ -97,7 +98,8 @@ let chefGrammar = {
 	"gone" : ["gone", "lost", "past", "forgotten", "forgiven"],
 	"rhetoricalQuestion" : ["#they# will not return this time.", "that time is #gone#", "could #they# even #love# you?", "what would #they# say if #they# knew?", "you can never #love# #them# again.", "it is #gone#, all is #gone#.", "#gone#, it is too late to #love# #them#.", "this is not what #they# wanted.", "all you wanted was #memory#.", "this was not #their# #intention#.", "what did you think would happen?"],
 	"intention" : ["intention", "plan"],
-	"adj" : ["#landscapeAdj#", "#color#", "#flavorMod#"],
+	"adj" : ["#landscapeAdj#", "#color#", "#flavorMod#", "#texture#", "#weirdAdj#"],
+	"noun" : ["#weirdNoun#", "#flavor#", "#vegetable#", "#animal#", "#landscapeFeature#"],
 
 	"landscapeAdj" : ["rainy", "windy", "old", "grey", "dark", "creaky", "quiet", "silent", "fair", "shadow", "verdant", "sunny", "far", "near", "dry", "dead"],
 	"landscapeFeature" : ["river", "mountain", "forest", "mines", "pines", "falls", "glen", "garden", "mansion", "village", "isle", "bayou", "swamp", "hill", "creek", "rainforest", "desert"],
@@ -111,7 +113,7 @@ let chefGrammar = {
 	"areDrowningIn" : ["drown in a sea of", "struggle against a tide of", "are overpowered by", "smell nothing but", "are in a sea of", "are becoming one with", "are lost in"],
 	"weirdAdj" : ["shadow", "rusty", "wild", "weird", "sweet", "fairy", "flame", "last", "ever", "never", "dead", "kings", "gods", "queens", "other", "dire", "fallow", "naked", "monster", "black", "new", "star", "white", "chosen", "forbidden", "great", "lost", "fallen", "idle", "joyful"],
 	"weirdNoun" : ["hand", "head", "song", "harp", "fate", "dancer", "rider", "fire", "jack", "spring", "wind", "hair", "fall", "heart", "spirit", "mind", "soul", "one", "being", "star", "blood", "bone"],
-	"animal" : ["horse","goat","impala","wombat","fox","wolf","coyote","dingo","centaur","amoeba","mongoose","capybara yeti","dragon","unicorn","gryphon","sphinx","kangaroo","boa"],
+	"animal" : ["horse","goat","impala","wombat","fox","wolf","coyote","dingo","centaur","amoeba","mongoose","capybara", "yeti","dragon","unicorn","gryphon","sphinx","kangaroo","boa"],
 
 	"wineType" : ["#redWineType#", "#whiteWineType#"],
 

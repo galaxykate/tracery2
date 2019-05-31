@@ -1,11 +1,124 @@
-.dragActive {
-	border: 10px  solid hsla(240, 50%, 50%, .9);
+.rawview {
+	position: relative;
+	display: flex;
+	margin: 2px;
+	padding : 2px 4px;
+	box-shadow:  0px 1px 2px rgba(0, 0, 0, .5);
+	background-color: hsla(20, 10%, 95%, 1);
+}
+.rawview-obj {
+	position: relative;
+}
+.rawview-row {
+	position: relative;
+	display: flex;
+}
+
+.rawview-label {
+	padding: 4px 0px 0px 0px;
+	color: rgba(0, 0, 0, .6);
+	font-size: 50%;
+	font-style: italic;
 }
 
 
-.dropPlaceholder {
-	width: 10px;
+.rawview-string {
+	font-family:monospace;
+}
+
+.dataview {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 2px;
+	padding : 2px 4px;
+	box-shadow:  0px 1px 2px rgba(0, 0, 0, .5);
+	background-color: hsla(20, 10%, 95%, 1);
+}
+
+.dataview-error {
+	font-size: 50%;
+	font-style: italic;
+	background-color: hsla(10, 90%, 75%, 1);
+}
+.dataview-label {
+	font-size: 50%;
+}
+
+.dataview.error {
+	background-color: hsla(10, 90%, 85%, 1);
+}
+.dataview-row {
+	position: relative;
+	display: flex;
+}
+
+.layer {
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+.socket {
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, .5);
+	background-color: hsla(20, 10%, 55%, 1);
+
+}
+
+.ery-el-label {
+	font-size: 10px;
+	font-style: italic;
+	text-align: center;
+	color: rgba(0, 0, 0, .5);
+}
+
+.ery-el {
+	padding: 2px 4px;
+	display: inline-block;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .3);
+	background-color: hsla(270, 10%, 95%, 1);
+}
+
+.toy {
+	font-size: 30px;
+	text-align: center;
+	border-radius: 7px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, .5);
+	background-color: hsla(20, 10%, 95%, 1);
+
+}
+.widget-mouse {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 190px;
+	height: 100px;
+	color: white;
+	padding: 2px 4px;
+	background-color: rgba(0, 0, 0, .5);
+	font-family:monospace;
+
+}
+
+.test-toy-ghost {
+	opacity: 0.2;
+}
+.droppable-active.droppable-open.socket  {
+	box-shadow: inset 0px 1px 24px hsla(150, 50%, 90%, 1);
+}
+.droppable-open.socket  {
+	box-shadow: inset 0px 1px 14px hsla(150, 50%, 90%, .3);
+	border: 3px solid hsla(150, 0%, 90%, .3);
+}
+
+
+.dropPlaceholder.objview-array-item {
+	margin: -10px;
+	width: 20px;
+	padding: 0px;
 	background-color: hsla(320, 50%, 60%, 1);
+	pointer-events: none;
 }
 .dragTarget.objview-array  {
 	 background-color: hsla(240, 50%, 60%, 1);
@@ -18,15 +131,18 @@
 	
 
 	
-	border-radius: 20px;
-	 padding: 2px 5px ;
-	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, .4);
-	 background-color: hsla(240, 50%, 90%, 1);
+	/*border-radius: 20px;*/
+	
 	 z-index: 100;
+	 pointer-events: none;
 }
 
 .disable-select{
-user-select: none;
+   user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .language-view {

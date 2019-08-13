@@ -1,0 +1,133 @@
+.tracerynode {
+	padding: 2px;
+	margin: 2px;
+	display: inline-block;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.tracerynode.expansionactive {
+	background-color: hsla(350, 100%, 80%, 1);
+}
+
+
+.tracerynode.expansioncomplete {
+	background-color: hsla(250, 100%, 80%, 1);
+}
+
+.tracerynode.locked {
+	border: 3px solid black;
+}
+
+
+.tracerynode>.header {
+	
+	display: flex;
+	flex-direction: row;
+}
+
+.tracerynode>.header>.nodetype {
+	border-radius: 10px;
+	padding: 3px;
+	font-size: 50%;
+}
+.tracerynode-action>.header>.nodetype {
+	background-color: hsla(50, 100%, 80%, 1);
+	color: hsla(50, 100%, 40%, 1);
+}
+.tracerynode-tag>.header>.nodetype {
+	background-color: hsla(180, 100%, 80%, 1);
+	color: hsla(180, 100%, 40%, 1);
+}
+
+.tracerynode-ruleset-option {
+	margin: 2px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 2px;
+	font-size: 70%;
+	background-color: hsla(180, 100%, 80%, 1);
+	color: hsla(180, 100%, 40%, 1);
+	border: 1px solid hsla(180, 100%, 50%, .5);
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+.tracerynode-ruleset-option.selected {
+	box-shadow: 0px 5px 2px rgba(0, 0, 0, .5);
+	transform: translate(0px, -3px);
+	background-color: hsla(180, 100%, 90%, 1);
+}
+
+.tracerynode-ruleset {
+	
+	border-radius: 10px;
+	padding: 3px;
+	background-color: hsla(180, 100%, 80%, 1);
+	color: hsla(180, 100%, 40%, 1);
+	border: 1px solid hsla(180, 100%, 50%, .5);
+}
+
+
+.tracerynode-symbolkey {
+	flex: 1;
+	font-family: monospace;
+	color: hsla(190, 100%, 40%, 1);
+}
+
+
+.tracerynode-plaintext {
+	border-radius: 10px;
+	background-color: hsla(180, 0%, 80%, 1);
+	color: hsla(180, 0%, 60%, 1);
+	border: 1px solid hsla(180, 0%, 50%, .5);
+
+	font-family: monospace;
+	
+}
+
+.tracerynode-raw {
+	padding: 2px;
+	font-size: 30%;
+	font-style: italic;
+	background-color: hsla(240, 100%, 80%, .3);
+	color: hsla(240, 100%, 30%, 1);
+
+}
+
+.tracerynode-errors {
+	padding: 3px;
+	font-size: 50%;
+	font-style: italic;
+	background-color: hsla(0, 100%, 80%, 1);
+	color: hsla(0, 100%, 30%, 1);
+
+}
+.tracerynode-rawrule{ 
+	padding: 3px;
+	font-size: 50%;
+	font-style: italic;
+	color: hsla(0, 100%, 0%, .3);
+	background-color: hsla(320, 100%, 80%, .3);
+ }
+
+ .tracerynode-final{
+ 	font-family: monospace;
+ 	color: hsla(330, 100%, 0%, .3);
+ padding: 3px;
+	font-size: 50%;
+	font-style: italic; 
+ 	background-color: hsla(320, 100%, 80%, .3);
+ }
+
+ .tracerynode-task {
+ 	padding: 2px;
+	margin: 2px;
+	display: inline-block;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+	font-size: 50%;
+	color: hsla(330, 100%, 0%, .3);
+	background-color: hsla(320, 0%, 80%, .3);
+ }
+
+
+ .tracerynode-task.active {
+ 	border: 3px solid hsla(180, 100%, 50%, .5);
+ }

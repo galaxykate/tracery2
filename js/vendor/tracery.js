@@ -201,7 +201,9 @@ var tracery = (function() {
 
 
 	TraceryGrammar.prototype.flatten = function(rule, context) {
-		return getFinished(this.expand(rule, context));
+		expanded = this.expand(rule, context)
+		console.log(expanded)
+		return getFinished();
 	};
 
 

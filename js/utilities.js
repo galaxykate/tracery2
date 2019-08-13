@@ -402,21 +402,38 @@ var utilities = {
 	},
 
 	words: {
-		emoji:("😎 🤓 😍 😀 😭 😡 😳 😱 😈 😺 👎 👍 🎃 🤖 👻 ☠️ 👽 👾 🤠 ✍️ 👀 🧠 👩‍🚀 🧝‍♀️ 🦹‍♂️ 🧙‍♀️ 👸 👩‍💻 🕵️‍♀️ 🧶 🧵 👗 🥼 👕 👘 👖 👠 👞 🧤 🧦 🧢 🎩 👑 💍 👓 🕶 🥽 🐶 🐱 🐭 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🐣 🦆 🦅 🦉 🦇 🐗 🐴 🦄 🐝 🐛 🦋 🐌 🐞 🐜 🦟 🐢 🐍 🕷 🦂 🐍 🦎 🦖 🐙 🦑 🦞 🦀 🐋 🦈 🐟 🐬 🐡 🐊 🐅 🐆 🦓 🦍 🐘 🦛 🦏 🐪 🐫 🦒 🦘 🐃 🐂 🐄 🐎 🐖 🐏 🐑 🦙 🐐 🦌 🐕 🐩 🐈 🐓 🦃 🦚 🦜 🦢 🐇 🦝 🦡 🐁 🐀 🐿 🦔 🐾 🐉 🌵 🎄 🌲 🌳 🌴 🌱 🌿 ☘️ 🍃 🍂 🍁 🍄 🐚 🌾 🌷 🥀 🌺 🌹 🌸 🌼 🌻 🌞 🌛 ⭐️ 💫 🌟 ✨ ⚡️ ☄️ 💥 🔥 🌪 🌈 ☀️ ☁️ 🌧 🌩 ❄️ ☃️ 💨 💧 💦 ☂️").split(" "),
+		emoji: ("😎 🤓 😍 😀 😭 😡 😳 😱 😈 😺 👎 👍 🎃 🤖 👻 ☠️ 👽 👾 🤠 ✍️ 👀 🧠 👩‍🚀 🧝‍♀️ 🦹‍♂️ 🧙‍♀️ 👸 👩‍💻 🕵️‍♀️ 🧶 🧵 👗 🥼 👕 👘 👖 👠 👞 🧤 🧦 🧢 🎩 👑 💍 👓 🕶 🥽 🐶 🐱 🐭 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🐣 🦆 🦅 🦉 🦇 🐗 🐴 🦄 🐝 🐛 🦋 🐌 🐞 🐜 🦟 🐢 🐍 🕷 🦂 🐍 🦎 🦖 🐙 🦑 🦞 🦀 🐋 🦈 🐟 🐬 🐡 🐊 🐅 🐆 🦓 🦍 🐘 🦛 🦏 🐪 🐫 🦒 🦘 🐃 🐂 🐄 🐎 🐖 🐏 🐑 🦙 🐐 🦌 🐕 🐩 🐈 🐓 🦃 🦚 🦜 🦢 🐇 🦝 🦡 🐁 🐀 🐿 🦔 🐾 🐉 🌵 🎄 🌲 🌳 🌴 🌱 🌿 ☘️ 🍃 🍂 🍁 🍄 🐚 🌾 🌷 🥀 🌺 🌹 🌸 🌼 🌻 🌞 🌛 ⭐️ 💫 🌟 ✨ ⚡️ ☄️ 💥 🔥 🌪 🌈 ☀️ ☁️ 🌧 🌩 ❄️ ☃️ 💨 💧 💦 ☂️").split(" "),
 
 		syllables: {
-			first: "B P T T T N M M M B C D F G Ph J K L M N P Qu R S T V W X Y Z St Fl Bl Pr Kr Ll Chr Sk Br Sth Ch Dhr Dr Sl Sc Sh Thl Thr Pl Fr Phr Phl Wh".split(" "),
-			middle: "an ad in an on ion ill oop ack ist all ar art air aean eun eun euh esqu aphn arl ifn ast ign agn af av ant app ab er en eor eon ent enth iar ein irt ian ion iont ill il ipp in is it ik ob ov orb oon ion uk uf un ull urk".split(" "),
+			first: "B P T T T N M M M B C D F G Ph J K L M N P Qu R S T V W X Y Z St Fl Bl Pr Kr Ll Chr Sk Br Sth Ch Dhr Dr Sl Sc Sh Thl Thr Pl Fr Phr Phl Wh".split(" ").map(s => s.toLowerCase()),
+			middle: "a e ie as is it in im am om all aff en em aw an ad in an on ion ill oop ack ist all ar art air aean eun eun euh esqu aphn arl ifn ast ign agn af av ant app ab er en eor eon ent enth iar ein irt ian ion iont ill il ipp in is it ik ob ov orb oon ion uk uf un ull urk".split(" "),
 			composites: "estr antr okl ackl".split(" "),
-			last: "e a i ie ei a ay oy y a ia ea u y en am is on an o ang ing io i el ios ius ae ie ee i".split(" "),
+			last: "ant ent art ert e a i ie ei a ay oy y a ia ea u y as en am us is art on in ath oll an o ang ing io i el ios ius ae ie ee i".split(" "),
+			lastVerb: "ade ay ate ify ize ant ise y aze ise int ard ord ip".split(" "),
 		},
-		places: ["room", "sea", "room", "forest", "pagoda", "temple", "sanctuary", "ocean", "wall", "dungeon", "cave", "sky", "house", "mountain", "sanctum", "palace", "river", "place", "desert", "island", "castle", "house", "inn", "tavern", "tower", "oasis", "tent"],
-		stuff: ["stone", "sorrow", "eyes", "flowers", "time", "music", "storms", "rhyme", "freedom", "rhythm", "wind", "life", "ice", "gold", "mysteries", "song", "waves", "dreams", "water", "steel", "iron", "memories", "thought", "seduction", "remembrance", "loss", "fear", "joy", "regret", "love", "friendship", "sleep", "slumber", "mirth"],
+		firstNames: ["Chloe", "Zora", "Zola", "Miki", "Kendra", "Kyle", "Mike", "Rob", "April", "Gregory", "Nathaniel", "Jim", "Arnav", "Noah", "Daniel", "David", "Cindy", "Stella", "Jonathan", "Gabriel", "Lucia", "Hollis", "Holly", "Maisie", "Jasper", "Lane", "Lincoln", "Sterling", "Summer", "Miranda", "Maria", "Shane", "Min", "Minnie", "Mariah", "Gus", "Dani", "Darius", "Elena", "Eduardo", "Elías", "Rajesh", "Ranjit", "Rex", "Rez", "Rey", "Yew", "Reba", "Jae-woo", "Ken", "Kira", "Jae", "Shah", "Josef", "Jørn", "Autumn", "Brandy", "Copper", "Cooper", "Harrow", "Manhattan", "Jo", "Jodi", "Karim", "Raf", "January", "Aku", "Juraj", "Yuri", "Kåre", "Lyn", "Jahan", "Mitch", "Alda", "Aimee", "Zoe", "London", "Paris", "Zuzu", "Zara", "Micah", "Song", "Sparrow", "Miguel", "Mikey", "Monette", "Michelina", "Agave", "Robyn", "Saffron", "Zeke", "Garth", "Rae", "Sebastian", "Seb", "Jake", "Bastion", "Luna", "Apple", "Delilah", "Jeremiah", "Finn", "Milo", "Finley", "April", "May", "September", "Kim", "Phineas", "Quincy", "Saul", "Rudy", "Cleo", "Noel", "Frankie", "June", "Rocky", "Pearl", "Harris", "Braxton", "Hamilton", "Ace", "Duke", "Rowan", "Stella", "Stevie", "Juniper", "Ryder", "Kai", "Judd", "Rhody", "Rho", "Sven", "Hazel", "Byron", "Edie", "Lola", "Poppy", "Jo", "Whisper", "Kaya", "Karim", "Kit", "Luca", "Rafa", "Miriam", "Aya", "Carmen", "Omar", "Anika", "Shan", "Luka", "Theo", "Emma", "Julian", "Adrian", "Ari", "Noah", "Maya", "Ariel"],
+		lastNames: ["Chao", "Fillmore", "García", "Bond", "Wong", "Wei", "Goldsmith", "Tran", "Chu", "Baudin", "Montagne", "Moulin", "Villeneuve", "Victor", "Rodríguez", "Smith", "Johnson", "Williams", "Miller", "Stockton", "Patel", "Chaudri", "Jahan", "Christiansen", "Whittington", "Austen", "Johnson", "Cheval", "McCulloch", "Shane", "Jones", "Stein", "Hirviniemi", "Kiuru", "Øvregard", "Singh", "Noriega", "Pine", "Clarion", "Belden", "Jaware", "Keita", "Kanu", "Geary", "Norton", "Kearny", "Aliyev", "Sato", "Tanaka", "Kim", "Lee", "Gray", "Yang", "Li", "Çelik", "Davis", "Knox", "Griffin", "Leon", "Finch", "Yoo", "Gupta", "Flores", "Lopez", "Moon", "Sun", "Castro", "Suzuki", "Torres", "Pineda", "Tsao", "Romero", "Wolf"],
+		adj: ["windy","wasted", "drunken", "gleaming",  "knowing", "beloved", "all-seeing", "forgiving", "betraying", "forgotten", "western", "eastern", "starlit", "forgotten", "lost", "haunted", "blessed", "remembered","forsaken", "unknowing", "innocent", "short-lived", "loving", "rejoicing", "fearful", "experienced", "vengeful", "forgiving", "joyful", "mournful", "sorrowful", "angry", "cruel", "fierce", "unbent", "broken", "unbroken", "foolish", "bewildered", "curious", "knowing", "everliving", "everloving", "hard-hearted", "careless", "carefree",  "bright", "dangerous", "fearless", "open-hearted", "generous", "prideful", "foolhardy", "brave", "bold", "wise", "wizened", "old", "young"],
+		places: ["room", "sea", "room", "forest", "pagoda", "waste", "temple", "sanctuary", "ocean", "wall", "parlor", "hall", "dungeon", "cave", "sky", "house", "mountain", "sanctum", "palace", "river", "place", "desert", "island", "castle", "house", "inn", "tavern", "tower", "oasis", "tent"],
+		stuff: ["stone", "sorrow","eyes", "flowers", "time", "fog", "sun", "clouds", "music", "songs", "stories", "tales", "storms", "rhyme", "freedom", "rhythm", "wind", "life", "ice", "gold", "mysteries", "song", "waves", "dreams", "water", "steel", "iron", "memories", "thought", "seduction", "remembrance", "loss", "fear", "joy", "regret", "love", "friendship", "sleep", "slumber", "mirth"],
 		animals: "cobra okapi moose amoeba mongoose capybara yeti dragon unicorn sphinx kangaroo boa nematode sheep quail goat corgi agouti zebra giraffe rhino skunk dolphin whale bullfrog okapi sloth monkey orangutan grizzly moose elk dikdik ibis stork finch nightingale goose robin eagle hawk iguana tortoise panther lion tiger gnu reindeer raccoon opossum".split(" "),
 		moods: "vexed indignant impassioned wistful astute courteous benevolent convivial mirthful lighthearted affectionate mournful inquisitive quizzical studious disillusioned angry bemused oblivious sophisticated elated skeptical morose gleeful curious sleepy hopeful ashamed alert energetic exhausted giddy grateful groggy grumpy irate jealous jubilant lethargic sated lonely relaxed restless surprised tired thankful".split(" "),
 		colors: "ivory silver ecru scarlet red burgundy ruby crimson carnelian pink rose grey pewter charcoal slate onyx black mahogany brown green emerald blue sapphire turquoise aquamarine teal gold yellow carnation orange lavender purple magenta lilac ebony amethyst jade garnet".split(" "),
-		material: "fire water cybernetic steampunk jazz steel bronze brass leather pearl cloud sky river great crystal rainbow iron gold silver titanium".split(" "),
+		material: "fire water cybernetic steampunk jazz steel bronze brass leather pearl cloud sky great crystal rainbow iron gold silver titanium".split(" "),
 		adventures: "lament tale myth story epic tears wish desire dance mystery enigma drama path training sorrows joy tragedy comedy riddle puzzle regret victory loss song adventure question quest vow oath tale travels".split(" "),
+		getRandomSeed: function(count = 8) {
+			let s = ""
+			for (var i = 0; i < count; i++) {
+				if (Math.random() > .5) {
+					s += String.fromCharCode(Math.floor(Math.random() * 26 + 65))
+				} else {
+					s += String.fromCharCode(Math.floor(Math.random() * 10 + 48))
+
+				}
+			}
+			return s;
+		},
+
 		getRandomBotName: function() {
 			var adj = randomCap(utilities.words.moods);
 			if (Math.random() > .8)
@@ -426,6 +443,7 @@ var utilities = {
 
 			return adj + " " + randomCap(utilities.words.animals);
 		},
+
 
 		getUserName: function() {
 			var f = utilities.getRandom(utilities.words.moods);
@@ -440,6 +458,24 @@ var utilities = {
 
 		getStatement: function() {
 			return "This " + utilities.getRandom(utilities.words.moods) + " " + utilities.getRandom(utilities.words.adventures) + " made me " + utilities.getRandom(utilities.words.moods);
+		},
+
+
+		getRandomPlace: function() {
+			let adj = utilities.capitaliseFirstLetter(getRandom(this.adj));
+			let adv = utilities.capitaliseFirstLetter(getRandom(this.adventures));
+			let animal = utilities.capitaliseFirstLetter(getRandom(this.animals));
+			let stuff = utilities.capitaliseFirstLetter(getRandom(this.stuff));
+			let place = utilities.capitaliseFirstLetter(getRandom(this.places));
+			let material = utilities.capitaliseFirstLetter(getRandom(this.material));
+
+			if (Math.random() > .4)
+				 material = utilities.capitaliseFirstLetter(getRandom(this.colors));
+
+			let fxns = [() => material + " " + place,() => place + " of " + adj + " " + stuff, () => adj + " " + place, () => "The " + material + " " + place, () => place + " of " + stuff]
+				
+			return getRandom(fxns)()
+
 		},
 
 		getRandomTitle: function() {
@@ -490,32 +526,54 @@ var utilities = {
 		},
 
 		getRandomWord: function(lengthMult) {
+			if (Math.random() > .5)
+				return utilities.getRandom(this.syllables.first) + utilities.getRandom(this.syllables.last);
+
 			if (!lengthMult)
 				lengthMult = 1;
-			var s = utilities.getRandom(this.syllables.first);
-			if (Math.random() < .2)
-				s = utilities.getRandom(this.syllables.middle);
+			var s = ""
+			if (Math.random() > .3)
+				s += utilities.getRandom(this.syllables.first);
 
-			var count = Math.floor(Math.random() * lengthMult * 3);
+			s += utilities.getRandom(this.syllables.middle);
+
+			var count = Math.floor(Math.random() * Math.random() * lengthMult * 5);
 			for (var i = 0; i < count; i++) {
 				var mid = utilities.getRandom(this.syllables.middle);
 				s += mid;
 
 			}
-			s += utilities.getRandom(this.syllables.last);
 
-			if (s.length > 6 * lengthMult && Math.random < .8)
-				s = utilities.words.getRandomWord();
-			if (s.length > 9 * lengthMult && Math.random < .9)
-				s = utilities.words.getRandomWord();
-
-			if (s.length < 6 * lengthMult && Math.random() < .2)
-				s += " " + utilities.words.getRandomWord();
-			else if (s.length < 6 * lengthMult && Math.random() < .2)
-				s += "'" + utilities.getRandom(this.syllables.last);
+			if (Math.random() > .3)
+				s += utilities.getRandom(this.syllables.last);
 
 			return s;
 		},
+		getRandomVerb: function() {
+
+			var s = utilities.getRandom(this.syllables.first);
+
+			var count = Math.floor(Math.random() * 3);
+			for (var i = 0; i < count; i++) {
+				var mid = utilities.getRandom(this.syllables.middle);
+				s += mid;
+			}
+			s += utilities.getRandom(this.syllables.lastVerb);
+
+			return s;
+		},
+		getRandomID: function(count = 8) {
+			let s = ""
+			for (var i = 0; i < count; i++) {
+				if (Math.random() > .4)
+					s += String.fromCharCode(Math.random() * 26 + 65);
+				else
+					s += String.fromCharCode(Math.random() * 10 + 48);
+			}
+
+			return s
+		},
+
 
 		getDollName: function() {
 			return utilities.capitaliseFirstLetter(utilities.words.getRandomWord());
@@ -626,8 +684,11 @@ var utilities = {
 	getRandomIndex: function(array) {
 		return Math.floor(Math.random() * Math.round(array.length - 1));
 	},
-	getRandomKey: function(obj) {
+	getRandomKeyFromObj: function(obj) {
 		return this.getRandom(Object.keys(obj));
+	},
+	getRandomValueFromObj: function(obj) {
+		return obj[this.getRandom(Object.keys(obj))];
 	},
 
 	constrain: function(val, lowerBound, upperBound) {
@@ -2326,6 +2387,7 @@ function mapArrayToObj(arr, keyFxn, valFxn) {
 		let val = arr[i];
 
 		let key = keyFxn(val, i);
+
 		obj2[key] = valFxn(val, i);
 
 
@@ -2444,6 +2506,36 @@ function isAlphaNum(c) {
 };
 
 
+
+function deepCompare(d0, d1, log) {
+	if (log === undefined)
+		log = []
+	switch (typeof d0) {
+		case "string":
+		case "boolean":
+		case "number":
+		case "function":
+			if (d0 !== d1)
+				log.push(d0 + "!==" + d1)
+
+			break;
+		case "object":
+			if (Array.isArray(d0)) {
+
+			} else {
+				forKeyIntersection(d0, d1, key0 => log.push("'" + key0 + "' missing from obj2"),
+					key => deepCompare(d0[key], d1[key], log),
+					key1 => log.push("'" + key1 + "' missing from obj1"))
+			}
+			break;
+		default:
+			console.log("unknown compare ", d0, d1)
+	}
+	return log
+
+}
+
+
 function toCamelCase(str) {
 
 	str = str.replace(/[.,'"-:;?]/g, "");
@@ -2506,28 +2598,28 @@ function toVuePanelTemplate(settings) {
 
 	let template = `
 	<div class='panel${classes}'${bind}${onFxn}>
-		<div class='header'>
-			<div class='header-main'>
-				${settings.title}
-			</div>
-			<div class='header-controls'>
-				${settings.controls}
-			</div>
-		</div>
+	<div class='header'>
+	<div class='header-main'>
+	${settings.title}
+	</div>
+	<div class='header-controls'>
+	${settings.controls}
+	</div>
+	</div>
 
-		<div class='content'>
-			${settings.content}
-		</div>
-		
-		
+	<div class='content'>
+	${settings.content}
+	</div>
+
+
 	
 	`
 
 	if (settings.footer)
 		template += `<div class='footer'>
-						${settings.footer}
-					</div>
-					`
+	${settings.footer}
+	</div>
+	`
 
 	template += "</div>"
 	return template

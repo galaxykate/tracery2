@@ -8,7 +8,10 @@
 	<meta name="description" content="testbed for parsers/editors for Ery-languages">
 	<meta name="author" content="@galaxykate">
 	<link rel="stylesheet" href="css/page.css?v=1.0">
+	<link rel="stylesheet" href="css/tracery.css?v=1.0">
 	<link rel="stylesheet" href="css/ery.css?v=1.0">
+	 <link href="css/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="js/vendor/jsoneditor.min.js"></script>
 
 </head>
 
@@ -16,40 +19,57 @@
 
 	
 	<main>
-		
-		<div id="main-cols">
-			<div id="col-left" class="column">
-				<div id="rawdata" ></div>
-
+		<div id="main-header"></div>
+		<div id="main-app" class="app">
+			<div id="ery-editor" class="panel">
+				<div class="header">
+					<div class="header-main"></div>
+					<div class="header-controls"><button>json</button></div>
+				</div>
+				<div class="content">
+					<div id="json-editor">
+						JSON
+					</div>
+				</div>
 			</div>
-			<div id="col-right" class="column">
-				<div id="parseddata" ></div>
-				
-			</div>
 
-		</div>
+		<div id="main-footer"></div>
 	</main>
 
 
 </body>
 
-
 <script type="text/javascript" src="js/vendor/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/vendor/jquery.hotkeys.js"></script>
 <script type="text/javascript" src="js/vendor/simplex_noise.js"></script>
+<script type="text/javascript" src="js/vendor/seedrandom.js"></script>
+<!-- <script type="text/javascript" src="js/vendor/tracery.js"></script> -->
 <script type="text/javascript" src="js/vendor/vue.js"></script>
-<script type="text/javascript" src="js/vendor/tracery.js"></script>
+<script type="text/javascript" src="js/vendor/vue.js"></script>
+<!-- <script type="text/javascript" src="js/vendor/tracery.js"></script> -->
+
+<script type="text/javascript" src="js/tracery/tracery.js"></script>
+
+<script type="text/javascript" src="js/vendor/seedrandom.js"></script>
 
 <script type="text/javascript" src="js/vendor/Sortable.min.js"></script>
 <script type="text/javascript" src="js/vendor/vuedraggable.umd.min.js"></script>
 
+
+<script type="text/javascript" src="js/vue/VEryApp.js"></script>
+<script type="text/javascript" src="js/vue/VEry-TraceryView.js"></script>
+
+<script type="text/javascript" src="js/vue/VEryEditor.js"></script>
+
 <script type="text/javascript" src="js/utilities.js"></script>
-<script type="text/javascript" src="js/ery/langspecs.js"></script>
+
+<script type="text/javascript" src="js/languageSpecs.js"></script><!-- 
 <script type="text/javascript" src="js/testgrammar.js"></script>
 <script type="text/javascript" src="js/ery.js"></script>
-<script type="text/javascript" src="js/mouse.js"></script>
+<script type="text/javascript" src="js/mouse.js"></script> -->
+
+<script type="text/javascript" src="js/erySchema.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/vue/VEry.js"></script>
 
 </html>

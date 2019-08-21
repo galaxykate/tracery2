@@ -1,11 +1,14 @@
 let grammar = tracery.createGrammar({
 	foo: ["#animal#"],
-	animal: ["cat", "dog", "fish", "ocelot", "unicorn", "macaw", "eagle", "dolphin", "okapi"],
+	animal: ["cat", "dog", "fish", "ocelot"],
+	animal2: ["cat", "dog", "fish", "ocelot", "unicorn", "macaw", "eagle", "dolphin", "okapi"],
 	mood: "wise sleepy joyful patient astute mirthful".split(" "),
 	adj: ["#mood#", "#color#"],	
-	color: ["pink", "magenta", "silver", "white", "grey", "blue", "turquoise", "purple", "indigo"],
+	color2: ["pink", "magenta", "silver", "white", "grey", "blue", "turquoise", "purple", "indigo"],
+	color: ["pink", "white", "grey", "blue"],
 	"origin2": ["#adj# #animal#"],
-	"origin": ["happy #animal#"],
+	"origin": ["#color# cat", "happy #animal#"],
+	// "origin": ["cat", "dog", "emu"],
 
  	"landscapeAdj" : ["rainy", "windy", "old", "grey", "dark", "creaky", "quiet", "silent", "fair", "shadow", "verdant", "sunny", "far", "near", "dry", "dead"],
 	"landscapeFeature" : ["river", "mountain", "forest", "mines", "pines", "falls", "glen", "garden", "mansion", "village", "isle", "bayou", "swamp", "hill", "creek", "rainforest", "desert"],
@@ -45,6 +48,11 @@ let grammar = tracery.createGrammar({
 	
  })
 
+
+paused = false
+window.addEventListener("keypress", function(e) {
+	paused = !paused
+});
 
 $(function() {
 	

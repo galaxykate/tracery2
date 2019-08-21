@@ -1,9 +1,94 @@
+.subsection {
+	padding: 3px;
+	margin: 3px;
+	background-color: hsla(250, 0%, 80%, .3);
+	border-radius: 5px;
+	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, .3);
+
+}
+
+.tile {
+	display: inline-block;
+	
+	margin: 3px;
+	background-color: hsla(250, 0%, 100%, .3);
+	border-radius: 5px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+	overflow: hidden;
+
+}
+
+.tracery-expansiontask {
+	bottom: 0px;
+	position: relative;
+	display: inline-flex;
+	transition: all .1s;
+	flex-direction: column;
+}
+
+
+.tracery-expansiontask.iscomplete {
+	bottom: 0px;
+	background-color: hsla(190, 10%, 60%, 1);
+}
+
+
+.tracery-expansiontask.inprogress {
+	
+	background-color: hsla(290, 70%, 80%, 1);
+	
+}
+
+
+
+
+.tracery-expansiontask.iscurrent {
+	bottom: 4px;
+	box-shadow: 0px 5px 4px rgba(0, 0, 0, .6);
+
+	/*border: 2px solid black;*/
+}
+
+.tracery-expansiontask-node {
+	display: inline-block;
+	font-size: 50%;
+	padding: 3px;
+	margin: 0px 4px 0px 0px;
+	font-style: italic;
+}
+
+
+
+.tracery-expansiontask-label {
+	padding: 2px;
+	font-size: 50%;
+}
+
+
+.tracery-expansion {
+	padding: 2px;
+	margin: 2px;
+	display: inline-block;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 1);
+}
+
 .tracerynode {
+	transition: .2s all;
 	padding: 2px;
 	margin: 2px;
 	display: inline-block;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
 }
+
+.tracerynode.inprogress {
+	box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, .5), inset 0px 1px 3px 2px hsla(150, 100%, 80%, 1);
+	
+}
+
+.tracerynode.iscomplete {
+	/*background-color: hsla(350, 0%, 80%, .3);*/
+}
+
 
 .tracerynode.expansionactive {
 	background-color: hsla(350, 100%, 80%, 1);
@@ -14,11 +99,32 @@
 	background-color: hsla(250, 100%, 80%, 1);
 }
 
+.tracerynode-innersection {
+	border: 1px solid rgba(0, 0, 0, .4);
+	padding: 2px;
+	margin: 2px;
+}
+
+.tracerynode-subheader {
+	text-align: center;
+	font-size: 50%;
+	font-style: italic;
+	color: rgba(0, 0, 0, .5);
+}
+
+.tracerynode-tagsections {
+	display: flex;
+	flex-direction: row;
+}
+
 .tracerynode.locked {
 	border: 3px solid black;
 }
 
 
+.tracerynode-nodeid {
+	padding: 2px;
+}
 .tracerynode>.header {
 	
 	display: flex;
@@ -41,7 +147,7 @@
 
 .tracerynode-ruleset-option {
 	margin: 2px;
-	display: inline-block;
+	
 	border-radius: 10px;
 	padding: 2px;
 	font-size: 70%;
@@ -109,12 +215,23 @@
  }
 
  .tracerynode-final{
+ 	display: inline-block;
+ 	transition: all .2s cubic-bezier(0.340, -0.210, 0.500, 1.595); 
  	font-family: monospace;
  	color: hsla(330, 100%, 0%, .3);
  padding: 3px;
+ margin: 1px;
+ border-radius: 10px;
 	font-size: 50%;
 	font-style: italic; 
- 	background-color: hsla(320, 100%, 80%, .3);
+ 	background-color: hsla(320, 100%, 80%, .0);
+ }
+
+ .tracerynode.iscomplete  .tracerynode-final {
+
+ 	color: hsla(330, 100%, 30%, 1);
+ 	background-color: hsla(320, 100%, 80%, 1);
+
  }
 
  .tracerynode-task {
